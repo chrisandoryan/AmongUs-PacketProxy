@@ -1,0 +1,16 @@
+Among Us Hack Project
+
+IP List
+Europe
+172.105.251.170
+172.105.249.25
+
+Asia
+139.162.111.196
+103.29.68.74
+
+Port List
+22023
+
+Filter List
+udp.port == 22023 // find server ip address

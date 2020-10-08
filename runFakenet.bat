@@ -1,0 +1,1 @@
+"D:\Tools\fakenet1.4.11\fakenet.exe" -c config.ini
