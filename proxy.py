@@ -27,7 +27,7 @@ class Proxy2Server(Thread):
     def run(self):
         while True:
             # 3. Receive from Among Us Server
-            self.data, self.serv_addr = self.server.recvfrom(1024)
+            self.data, self.serv_addr = self.server.recvfrom(4096)
             print("[{} to P2S]: {}".format(':'.join(map(str, self.serv_addr)), self.data.hex()))
 
             # reload(parser)
@@ -55,7 +55,7 @@ class Game2Proxy(Thread):
         self.server = None
 
         # 1. Waiting for first data from Among Us Client
-        self.data, self.game_addr = self.game.recvfrom(1024)
+        self.data, self.game_addr = self.game.recvfrom(4096)
 
     def run(self):
         while True:
@@ -70,7 +70,7 @@ class Game2Proxy(Thread):
                 self.data = None
             else:
                 # 1. Receive from Among Us Client
-                self.data, self.game_addr = self.game.recvfrom(1024)
+                self.data, self.game_addr = self.game.recvfrom(4096)
                 
 class Proxy(Thread):
 
